@@ -15,6 +15,18 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
         public Form1()
         {
             InitializeComponent();
+
+            // test send
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void signInButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
