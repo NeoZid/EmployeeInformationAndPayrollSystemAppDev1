@@ -10,24 +10,11 @@ using System.Windows.Forms;
 
 namespace EmployeeInformationAndPayrollSystemAppDev1
 {
-    public partial class Form1 : Form
+    public partial class RegisterForm : Form
     {
-        public Form1()
+        public RegisterForm()
         {
             InitializeComponent();
-
-            // test send
-            // test send x2
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void signInButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
