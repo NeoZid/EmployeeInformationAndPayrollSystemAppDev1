@@ -17,6 +17,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             InitializeComponent();
 
             // test send
+            // test send x2
         }
 
         private void label1_Click(object sender, EventArgs e)
