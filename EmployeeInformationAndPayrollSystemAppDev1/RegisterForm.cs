@@ -12,23 +12,19 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
 {
     public partial class RegisterForm : Form
     {
-        private LogInForm _loginForm;
-        public RegisterForm()
+        private ManagerForm _managerForm;
+        
+        public RegisterForm(ManagerForm managerForm)
         {
             InitializeComponent();
-            
-        }
-
-        public RegisterForm(LogInForm loginForm)
-        {
-            InitializeComponent();
-            _loginForm = loginForm;
+            _managerForm = managerForm;
         }
 
         private void RegisterForm_Load(object sender, EventArgs e)
         {
             CsvManager csv = new CsvManager();
-            List<Employee> employees = csv.LoadEmployees("employees.csv");
+            string path = Application.StartupPath + "\\employees.csv";
+            List<Employee> employees = csv.LoadEmployees(path);
             int nextNumber = employees.Count + 1;
             employeeIdTb.Text = "EMP" + nextNumber.ToString("D3");
         }
@@ -54,8 +50,8 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             Employee employee1 = new Employee(firstName, lastName, employeeId, birthDay, email, password,role, department, hourlyRate);
 
             CsvManager csv = new CsvManager();
-
-            List<Employee> employees = csv.LoadEmployees("employees.csv");
+            string path = Application.StartupPath + "\\employees.csv"; // always points to bin/Debug
+            List<Employee> employees = csv.LoadEmployees("path");
             employees.Add(employee1);
             csv.SaveEmployees("employees.csv", employees);
 

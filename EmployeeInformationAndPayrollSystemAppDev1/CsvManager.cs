@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeInformationAndPayrollSystemAppDev1
 {
-    internal class CsvManager
+    public class CsvManager
     {
         public List<Employee> LoadEmployees(string filePath)
         {
@@ -22,6 +22,8 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             {
                 string[] values = lines[i].Split(',');
                 Employee e = new Employee(values[0], values[1], values[2], DateTime.Parse(values[3]), values[4], values[5], values[6], values[7], double.Parse(values[8]));
+                e.HoursWorked = double.Parse(values[9]);
+                e.PTODays = int.Parse(values[10]);
                 employees.Add(e);
             }
 
