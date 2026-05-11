@@ -20,18 +20,48 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
         
 
         private void signInButton_Click(object sender, EventArgs e)
-        {
-            SignInForm si = new SignInForm();
-            si.Show();
-            this.Hide();
             
+        {
+            if (string.IsNullOrEmpty(userIdTb.Text) || (string.IsNullOrEmpty(passwordTb.Text)))
+            {
+                MessageBox.Show("Please fill out all of the fields", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            
+            if (userIdTb.Text == "ADMIN" && passwordTb.Text == "ADMIN123")
+            {
+                RegisterForm rf = new RegisterForm();
+                rf.Show();
+                return;
+            }
+            // <-- used when data isnt loaded properly
+
+            CsvManager csv = new CsvManager();
+
+            List<Employee> employees = csv.LoadEmployees("employees.csv");
+
+            Employee found = employees.Find(emp => emp.EmployeeId  == userIdTb.Text);
+
+            if (found == null)
+            {
+                MessageBox.Show("Employee ID not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (found.Password != passwordTb.Text)
+            {
+                MessageBox.Show("Incorrect password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (found.Department == "Management")
+            {
+                // manager dashboard
+            } else
+            {
+                // employee view
+            }
         }
 
-        private void registerButton_Click(object sender, EventArgs e)
-        {
-            RegisterForm reg = new RegisterForm();
-            reg.Show();
-            this.Hide();
-        }
+        
     }
 }

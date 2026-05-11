@@ -14,13 +14,14 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
         public string EmployeeId { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Email { get; set; }
+        public string Password { get; set; }
         public string Role { get; set; }
         public string Department { get; set; }
         public double HourlyRate { get; set; }
         public double HoursWorked { get; set; }
         public int PTODays { get; set; }
 
-        public Employee (string firstName, string lastName, string employeeId, DateTime dateOfBirth, string email, string role, string department,
+        public Employee (string firstName, string lastName, string employeeId, DateTime dateOfBirth, string email, string password, string role, string department,
             double  hourlyRate)
         {
             this.FirstName = firstName ;
@@ -28,6 +29,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             this.EmployeeId = employeeId ;
             this.DateOfBirth = dateOfBirth ;
             this.Email = email ;
+            this.Password = password ;
             this.Role = role ;
             this.Department = department ;
             this.HourlyRate = hourlyRate;

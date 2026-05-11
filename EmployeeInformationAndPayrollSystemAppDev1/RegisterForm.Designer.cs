@@ -48,6 +48,8 @@
             this.registerButton = new System.Windows.Forms.Button();
             this.emailTb = new System.Windows.Forms.TextBox();
             this.departmentCb = new System.Windows.Forms.ComboBox();
+            this.passwordTb = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // registerTitle
@@ -63,9 +65,10 @@
             // infoLabel
             // 
             this.infoLabel.AutoSize = true;
-            this.infoLabel.Location = new System.Drawing.Point(218, 82);
+            this.infoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoLabel.Location = new System.Drawing.Point(202, 70);
             this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(189, 13);
+            this.infoLabel.Size = new System.Drawing.Size(220, 15);
             this.infoLabel.TabIndex = 1;
             this.infoLabel.Text = "Fill out the form carefully for registration";
             // 
@@ -139,7 +142,7 @@
             // 
             // employeeIdTb
             // 
-            this.employeeIdTb.Location = new System.Drawing.Point(121, 270);
+            this.employeeIdTb.Location = new System.Drawing.Point(232, 272);
             this.employeeIdTb.Name = "employeeIdTb";
             this.employeeIdTb.ReadOnly = true;
             this.employeeIdTb.Size = new System.Drawing.Size(161, 20);
@@ -148,7 +151,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(118, 293);
+            this.label5.Location = new System.Drawing.Point(279, 293);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 13);
             this.label5.TabIndex = 15;
@@ -157,7 +160,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(330, 293);
+            this.label6.Location = new System.Drawing.Point(331, 344);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 13);
             this.label6.TabIndex = 16;
@@ -175,7 +178,7 @@
             "Marketing Specialist",
             "Manager",
             "Team Lead"});
-            this.roleCb.Location = new System.Drawing.Point(121, 333);
+            this.roleCb.Location = new System.Drawing.Point(121, 374);
             this.roleCb.Name = "roleCb";
             this.roleCb.Size = new System.Drawing.Size(161, 21);
             this.roleCb.TabIndex = 17;
@@ -183,7 +186,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(118, 358);
+            this.label7.Location = new System.Drawing.Point(118, 398);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 13);
             this.label7.TabIndex = 18;
@@ -191,7 +194,7 @@
             // 
             // hourlyRateTb
             // 
-            this.hourlyRateTb.Location = new System.Drawing.Point(333, 334);
+            this.hourlyRateTb.Location = new System.Drawing.Point(333, 375);
             this.hourlyRateTb.Name = "hourlyRateTb";
             this.hourlyRateTb.Size = new System.Drawing.Size(158, 20);
             this.hourlyRateTb.TabIndex = 19;
@@ -199,7 +202,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(330, 357);
+            this.label8.Location = new System.Drawing.Point(330, 398);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 13);
             this.label8.TabIndex = 20;
@@ -208,7 +211,7 @@
             // registerButton
             // 
             this.registerButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.registerButton.Location = new System.Drawing.Point(226, 403);
+            this.registerButton.Location = new System.Drawing.Point(224, 429);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(172, 25);
             this.registerButton.TabIndex = 21;
@@ -231,16 +234,34 @@
             "Information Technology",
             "Marketing",
             "Management"});
-            this.departmentCb.Location = new System.Drawing.Point(333, 270);
+            this.departmentCb.Location = new System.Drawing.Point(333, 320);
             this.departmentCb.Name = "departmentCb";
             this.departmentCb.Size = new System.Drawing.Size(158, 21);
             this.departmentCb.TabIndex = 23;
+            // 
+            // passwordTb
+            // 
+            this.passwordTb.Location = new System.Drawing.Point(121, 321);
+            this.passwordTb.Name = "passwordTb";
+            this.passwordTb.Size = new System.Drawing.Size(161, 20);
+            this.passwordTb.TabIndex = 24;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(118, 344);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 13);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Password";
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 593);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.passwordTb);
             this.Controls.Add(this.departmentCb);
             this.Controls.Add(this.emailTb);
             this.Controls.Add(this.registerButton);
@@ -291,5 +312,7 @@
         private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.TextBox emailTb;
         private System.Windows.Forms.ComboBox departmentCb;
+        private System.Windows.Forms.TextBox passwordTb;
+        private System.Windows.Forms.Label label9;
     }
 }

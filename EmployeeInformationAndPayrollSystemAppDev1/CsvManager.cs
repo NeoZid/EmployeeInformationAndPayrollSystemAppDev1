@@ -21,7 +21,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             for (int i = 1; i < lines.Length; i++) 
             {
                 string[] values = lines[i].Split(',');
-                Employee e = new Employee(values[0], values[1], values[2], DateTime.Parse(values[3]), values[4], values[5], values[6], double.Parse(values[7]));
+                Employee e = new Employee(values[0], values[1], values[2], DateTime.Parse(values[3]), values[4], values[5], values[6], values[7], double.Parse(values[8]));
                 employees.Add(e);
             }
 
@@ -32,11 +32,11 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
         public void SaveEmployees(string filePath, List<Employee> employees)
         {
             List<String> lines = new List<string>();
-            lines.Add("FirstName,LastName,EmployeeId,DateOfBirth,Email,Role,Department,HourlyRate,HoursWorked,PTODays");
+            lines.Add("FirstName,LastName,EmployeeId,DateOfBirth,Email,Password,Role,Department,HourlyRate,HoursWorked,PTODays");
 
             foreach (Employee e in employees) 
             {
-                string line = $"{e.FirstName},{e.LastName},{e.EmployeeId},{e.DateOfBirth.ToString("yyyy-MM-dd")},{e.Email},{e.Role},{e.Department},{e.HourlyRate},{e.HoursWorked},{e.PTODays}";
+                string line = $"{e.FirstName},{e.LastName},{e.EmployeeId},{e.DateOfBirth.ToString("yyyy-MM-dd")},{e.Email},{e.Password},{e.Role},{e.Department},{e.HourlyRate},{e.HoursWorked},{e.PTODays}";
                 lines.Add(line);   
             }
 
