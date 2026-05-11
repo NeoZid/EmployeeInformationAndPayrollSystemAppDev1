@@ -51,9 +51,9 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
 
             CsvManager csv = new CsvManager();
             string path = Application.StartupPath + "\\employees.csv"; // always points to bin/Debug
-            List<Employee> employees = csv.LoadEmployees("path");
+            List<Employee> employees = csv.LoadEmployees(path);
             employees.Add(employee1);
-            csv.SaveEmployees("employees.csv", employees);
+            csv.SaveEmployees(path, employees);
 
             MessageBox.Show("Employee Register successfully!" , "Success", MessageBoxButtons.OK , MessageBoxIcon.Information);
             this.Close();

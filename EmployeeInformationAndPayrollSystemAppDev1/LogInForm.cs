@@ -28,6 +28,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
                 return;
             }
 
+            // <-- used when data isnt loaded properly
             
             if (userIdTb.Text == "ADMIN" && passwordTb.Text == "ADMIN123")
             {
@@ -48,8 +49,8 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             // <-- used when data isnt loaded properly
 
             CsvManager csv = new CsvManager();
-
-            List<Employee> employees = csv.LoadEmployees("employees.csv");
+            string path = Application.StartupPath + "\\employees.csv";
+            List<Employee> employees = csv.LoadEmployees(path);
 
             Employee found = employees.Find(emp => emp.EmployeeId  == userIdTb.Text);
 
@@ -65,10 +66,14 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             }
             if (found.Department == "Management")
             {
-                // manager dashboard
+                ManagerForm mf = new ManagerForm(found);
+                mf.Show();
+                this.Hide();
             } else
             {
-                // employee view
+                EmployeeViewForm ef = new EmployeeViewForm(found);
+                ef.Show();
+                this.Hide();
             }
         }
 
