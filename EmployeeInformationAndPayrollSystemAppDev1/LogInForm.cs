@@ -23,6 +23,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
         {
             SignInForm si = new SignInForm();
             si.Show();
+            this.Hide();
             
         }
 
@@ -30,6 +31,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
         {
             RegisterForm reg = new RegisterForm();
             reg.Show();
+            this.Hide();
         }
     }
 }
