@@ -46,8 +46,8 @@
             // 
             // signInButton
             // 
-            this.signInButton.BackColor = System.Drawing.Color.Turquoise;
             resources.ApplyResources(this.signInButton, "signInButton");
+            this.signInButton.BackColor = System.Drawing.Color.Turquoise;
             this.signInButton.ForeColor = System.Drawing.Color.White;
             this.signInButton.Name = "signInButton";
             this.signInButton.UseVisualStyleBackColor = false;

@@ -55,7 +55,6 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             _employee.HourlyRate = double.Parse(hourlyRateTb.Text);
             _employee.HoursWorked = double.Parse(hoursWorkedTb.Text);
             _employee.PTODays = int.Parse(PTODaysTb.Text);
-            // For the CSV file
             string path = Application.StartupPath + "\\employees.csv";
             CsvManager csv = new CsvManager();
             List<Employee> employeees = csv.LoadEmployees(path);

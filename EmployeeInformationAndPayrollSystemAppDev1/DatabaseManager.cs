@@ -24,6 +24,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             using (SqlConnection conn = new SqlConnection(GetConnectionString()))
             {
                 conn.Open(); // establishes the connection
+                // we used @"" makes multiline string cleaner and readable
                 string query = @"INSERT INTO Employees(EmployeeId, FirstName, LastName, DateOfBirth, Email, Password, Role,
                     Department, HourlyRate, HoursWorked, PTODays) VALUES (@EmployeeId, @FirstName, @LastName, @DateOfBirth, @Email, @Password,
                     @Role, @Department, @HourlyRate, @HoursWorked, @PTODays)";
@@ -53,7 +54,6 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             using (SqlConnection conn = new SqlConnection(GetConnectionString()))
             {
                 conn.Open();
-                // @ at the beginning of query is to allow multiple lines
                 string query = @"UPDATE Employees SET FirstName = @FirstName, LastName = @LastName, DateOfBirth = @DateOfBirth, 
                         Email = @Email, Role = @Role, Department = @Department, HourlyRate = @HourlyRate, HoursWorked = @HoursWorked,
                         PTODays = @PTODays
@@ -100,15 +100,17 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
                 string query = "SELECT COUNT(*) FROM Employees WHERE EmployeeId = @EmployeeId";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@EmployeeId", employeeId);
-                int count = (int)cmd.ExecuteScalar();
-                return count > 0;
+                int count = (int)cmd.ExecuteScalar(); // <- returns a single value of the query
+                return count > 0; // 0 = false, 1+ = true
             }
         }
 
         public void SyncFromCsv(List<Employee> employees)
         {
+            // loops through employees in CSV
             foreach (Employee emp in employees)
             {
+                // if exists, inserts in the database // if not, skip
                 if (!EmployeeExists(emp.EmployeeId))
                 {
                     InsertEmployee(emp);

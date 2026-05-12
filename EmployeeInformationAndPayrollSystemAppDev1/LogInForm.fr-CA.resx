@@ -137,13 +137,13 @@
     <value>Se connecter</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 17</value>
+    <value>73, 17</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Identifiant</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 17</value>
+    <value>90, 17</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Mot de passe</value>
