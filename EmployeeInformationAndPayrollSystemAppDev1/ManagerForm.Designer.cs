@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.employeeDataView = new System.Windows.Forms.DataGridView();
             this.registerButton = new System.Windows.Forms.Button();
@@ -40,49 +43,84 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 34);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.Location = new System.Drawing.Point(20, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 24);
+            this.label1.Size = new System.Drawing.Size(279, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Manager Dashboard";
             // 
             // employeeDataView
             // 
-            this.employeeDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.employeeDataView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.employeeDataView.BackgroundColor = System.Drawing.Color.SeaShell;
+            this.employeeDataView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Snow;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employeeDataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.employeeDataView.ColumnHeadersHeight = 35;
+            this.employeeDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.employeeDataView.DefaultCellStyle = dataGridViewCellStyle18;
+            this.employeeDataView.GridColor = System.Drawing.Color.LightGray;
             this.employeeDataView.Location = new System.Drawing.Point(27, 72);
             this.employeeDataView.Name = "employeeDataView";
+            this.employeeDataView.RowHeadersVisible = false;
+            this.employeeDataView.RowTemplate.Height = 28;
+            this.employeeDataView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.employeeDataView.Size = new System.Drawing.Size(1035, 404);
             this.employeeDataView.TabIndex = 1;
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(330, 34);
+            this.registerButton.BackColor = System.Drawing.Color.SlateBlue;
+            this.registerButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerButton.ForeColor = System.Drawing.Color.White;
+            this.registerButton.Location = new System.Drawing.Point(345, 35);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(206, 32);
             this.registerButton.TabIndex = 2;
             this.registerButton.Text = "Register An Employee";
-            this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.UseVisualStyleBackColor = false;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // editButton
             // 
-            this.editButton.Location = new System.Drawing.Point(590, 35);
+            this.editButton.BackColor = System.Drawing.Color.CadetBlue;
+            this.editButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.ForeColor = System.Drawing.Color.White;
+            this.editButton.Location = new System.Drawing.Point(608, 35);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(206, 31);
+            this.editButton.Size = new System.Drawing.Size(206, 32);
             this.editButton.TabIndex = 3;
             this.editButton.Text = "Edit An Employee";
-            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.UseVisualStyleBackColor = false;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // removeButton
             // 
-            this.removeButton.Location = new System.Drawing.Point(825, 35);
+            this.removeButton.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.removeButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeButton.ForeColor = System.Drawing.Color.White;
+            this.removeButton.Location = new System.Drawing.Point(856, 34);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(206, 32);
             this.removeButton.TabIndex = 4;
             this.removeButton.Text = "Remove an employee";
-            this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.UseVisualStyleBackColor = false;
             this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // logoutButton
@@ -99,6 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MediumTurquoise;
             this.ClientSize = new System.Drawing.Size(1089, 549);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.removeButton);
@@ -106,7 +145,10 @@
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.employeeDataView);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "ManagerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManagerForm";
             this.Load += new System.EventHandler(this.ManagerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employeeDataView)).EndInit();

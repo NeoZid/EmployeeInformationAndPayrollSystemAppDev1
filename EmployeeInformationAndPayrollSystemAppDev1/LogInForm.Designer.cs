@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogInForm));
             this.mainTitle = new System.Windows.Forms.Label();
             this.signInButton = new System.Windows.Forms.Button();
             this.passwordTb = new System.Windows.Forms.TextBox();
@@ -38,71 +39,54 @@
             // 
             // mainTitle
             // 
-            this.mainTitle.AutoSize = true;
-            this.mainTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mainTitle.Location = new System.Drawing.Point(65, 159);
+            resources.ApplyResources(this.mainTitle, "mainTitle");
+            this.mainTitle.BackColor = System.Drawing.Color.Transparent;
+            this.mainTitle.ForeColor = System.Drawing.Color.MidnightBlue;
             this.mainTitle.Name = "mainTitle";
-            this.mainTitle.Size = new System.Drawing.Size(674, 37);
-            this.mainTitle.TabIndex = 0;
-            this.mainTitle.Text = "Employee\'s Information and Payroll System";
-            this.mainTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // signInButton
             // 
-            this.signInButton.Location = new System.Drawing.Point(352, 371);
+            this.signInButton.BackColor = System.Drawing.Color.Turquoise;
+            resources.ApplyResources(this.signInButton, "signInButton");
+            this.signInButton.ForeColor = System.Drawing.Color.White;
             this.signInButton.Name = "signInButton";
-            this.signInButton.Size = new System.Drawing.Size(75, 23);
-            this.signInButton.TabIndex = 1;
-            this.signInButton.Text = "Sign In";
-            this.signInButton.UseVisualStyleBackColor = true;
+            this.signInButton.UseVisualStyleBackColor = false;
             this.signInButton.Click += new System.EventHandler(this.signInButton_Click);
             // 
             // passwordTb
             // 
-            this.passwordTb.Location = new System.Drawing.Point(318, 317);
+            resources.ApplyResources(this.passwordTb, "passwordTb");
             this.passwordTb.Name = "passwordTb";
-            this.passwordTb.PasswordChar = '*';
-            this.passwordTb.Size = new System.Drawing.Size(172, 20);
-            this.passwordTb.TabIndex = 3;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(317, 232);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "User ID";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(317, 301);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Password";
             // 
             // userIdTb
             // 
-            this.userIdTb.Location = new System.Drawing.Point(320, 248);
+            resources.ApplyResources(this.userIdTb, "userIdTb");
             this.userIdTb.Name = "userIdTb";
-            this.userIdTb.Size = new System.Drawing.Size(170, 20);
-            this.userIdTb.TabIndex = 6;
             // 
             // LogInForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 595);
+            this.BackColor = System.Drawing.Color.SeaShell;
             this.Controls.Add(this.userIdTb);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.passwordTb);
             this.Controls.Add(this.signInButton);
             this.Controls.Add(this.mainTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "LogInForm";
-            this.Text = "Employee Info and Payroll System";
             this.ResumeLayout(false);
             this.PerformLayout();
 

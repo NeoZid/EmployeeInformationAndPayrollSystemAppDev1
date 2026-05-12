@@ -26,6 +26,8 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             idLabel.Text = _employee.EmployeeId;
             departmentLabel.Text = _employee.Department;
             roleLabel.Text = _employee.Role;
+            hourlyRateLabel.Text = "$" + _employee.HourlyRate.ToString("F2");
+            PTOdaysLabel.Text = _employee.PTODays.ToString();
 
             if (_employee.HoursWorked > 0)
             {
@@ -53,12 +55,11 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
                 return;
             }
 
-            double totalGross = pc.CalculateGross(double.Parse(hourlyRateLabel.Text), double.Parse(hoursWorkedTb.Text));
-            grossPayLabel.Text = totalGross.ToString();
+            double totalGross = pc.CalculateGross(_employee.HourlyRate, double.Parse(hoursWorkedTb.Text));
+            grossPayLabel.Text = "$" + totalGross.ToString("F2");
 
             double totalNet = pc.CalculateNet(totalGross);
-            netPayLabel.Text = totalNet.ToString();
-
+            netPayLabel.Text = "$" + totalNet.ToString("F2");
             _employee.HoursWorked = double.Parse(hoursWorkedTb.Text);
             string path = Application.StartupPath + "\\employees.csv";
             CsvManager csv = new CsvManager();

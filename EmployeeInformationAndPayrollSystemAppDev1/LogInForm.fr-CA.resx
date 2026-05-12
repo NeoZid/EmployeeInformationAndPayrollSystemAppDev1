@@ -117,5 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="mainTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 159</value>
+  </data>
+  <data name="mainTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>614, 37</value>
+  </data>
+  <data name="mainTitle.Text" xml:space="preserve">
+    <value>Système d'information et de paie des employés</value>
+  </data>
+  <data name="signInButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>314, 371</value>
+  </data>
+  <data name="signInButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 32</value>
+  </data>
+  <data name="signInButton.Text" xml:space="preserve">
+    <value>Se connecter</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 17</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Identifiant</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 17</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
 </root>
