@@ -25,8 +25,9 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             CsvManager csv = new CsvManager();
             string path = Application.StartupPath + "\\employees.csv";
             List<Employee> employees = csv.LoadEmployees(path);
-            int nextNumber = employees.Count + 1;
-            employeeIdTb.Text = "EMP" + nextNumber.ToString("D3");
+            int employeeCount = employees.Count;
+            employeeCount++;
+            employeeIdTb.Text = "EMP" + employeeCount.ToString("D3");
         }
 
         private void registerButton_Click(object sender, EventArgs e)
