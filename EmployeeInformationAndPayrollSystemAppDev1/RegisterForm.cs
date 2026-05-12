@@ -49,11 +49,16 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             double hourlyRate = double.Parse(hourlyRateTb.Text);
             Employee employee1 = new Employee(firstName, lastName, employeeId, birthDay, email, password,role, department, hourlyRate);
 
+            // For the csv
             CsvManager csv = new CsvManager();
             string path = Application.StartupPath + "\\employees.csv"; // always points to bin/Debug
             List<Employee> employees = csv.LoadEmployees(path);
             employees.Add(employee1);
             csv.SaveEmployees(path, employees);
+
+            // For the database
+            DatabaseManager db = new DatabaseManager();
+            db.InsertEmployee(employee1);
 
             MessageBox.Show("Employee Register successfully!" , "Success", MessageBoxButtons.OK , MessageBoxIcon.Information);
             this.Close();

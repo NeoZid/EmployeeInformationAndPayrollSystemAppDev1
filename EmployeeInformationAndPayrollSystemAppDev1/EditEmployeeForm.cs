@@ -28,8 +28,8 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             PTODaysTb.Text = _employee.PTODays.ToString();
             hoursWorkedTb.Text = _employee.HoursWorked.ToString();
             hourlyRateTb.Text = _employee.HourlyRate.ToString();
-            departmentCb.Text = _employee.Department.ToString();   
-            roleCb.Text = _employee.Role;
+            departmentCb.SelectedItem = _employee.Department;
+            roleCb.SelectedItem = _employee.Role;
         }
         private void cancelButton_Click(object sender, EventArgs e)
         {
@@ -38,8 +38,8 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(fNameTb.Text) || string.IsNullOrEmpty(lNameTb.Text) || string.IsNullOrEmpty(emailTb.Text) ||
-                string.IsNullOrEmpty(fNameTb.Text) || string.IsNullOrEmpty(PTODaysTb.Text) || string.IsNullOrEmpty(hoursWorkedTb.Text) ||
+            if (string.IsNullOrEmpty(fNameTb.Text) || string.IsNullOrEmpty(lNameTb.Text) || string.IsNullOrEmpty(emailTb.Text)  
+                || string.IsNullOrEmpty(PTODaysTb.Text) || string.IsNullOrEmpty(hoursWorkedTb.Text) ||
                 string.IsNullOrEmpty(hourlyRateTb.Text) || departmentCb.SelectedIndex == -1 || roleCb.SelectedIndex == -1)
             {
                 MessageBox.Show("Please fill out all of the fields", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -55,7 +55,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             _employee.HourlyRate = double.Parse(hourlyRateTb.Text);
             _employee.HoursWorked = double.Parse(hoursWorkedTb.Text);
             _employee.PTODays = int.Parse(PTODaysTb.Text);
-
+            // For the CSV file
             string path = Application.StartupPath + "\\employees.csv";
             CsvManager csv = new CsvManager();
             List<Employee> employeees = csv.LoadEmployees(path);
@@ -65,8 +65,14 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             if (index >= 0)
             {
                 // once found, we replace it and save
+                // For the CSV file
                 employeees[index] = _employee;
                 csv.SaveEmployees(path, employeees);
+
+                // For the database
+                DatabaseManager db = new DatabaseManager();
+                db.UpdateEmployee(_employee);
+
                 MessageBox.Show("Employee updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
                 this.Close();

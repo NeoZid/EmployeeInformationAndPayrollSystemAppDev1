@@ -21,6 +21,14 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
 
         private void ManagerForm_Load(object sender, EventArgs e)
         {
+            // need to sync database and CSV employees 
+            string path = Application.StartupPath + "\\employees.csv";
+            CsvManager csv = new CsvManager();
+            List<Employee> employees = csv.LoadEmployees(path);
+
+            DatabaseManager db = new DatabaseManager();
+            db.SyncFromCsv(employees);
+
             LoadGrid();
         }
 
@@ -61,6 +69,11 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
                 List<Employee> employees = csv.LoadEmployees(path);
                 employees.RemoveAll(emp => emp.EmployeeId == selected.EmployeeId);
                 csv.SaveEmployees(path, employees);
+
+                // Database
+                DatabaseManager db = new DatabaseManager();
+                db.DeleteEmployee(selected);
+
                 LoadGrid();
             }
         }
