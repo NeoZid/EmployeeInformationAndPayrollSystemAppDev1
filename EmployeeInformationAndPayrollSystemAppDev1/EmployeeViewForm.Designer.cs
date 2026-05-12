@@ -47,6 +47,7 @@
             this.netPayLabel = new System.Windows.Forms.Label();
             this.PTOdaysLabel = new System.Windows.Forms.Label();
             this.hourlyRateLabel = new System.Windows.Forms.Label();
+            this.logoutButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -236,11 +237,22 @@
             this.hourlyRateLabel.TabIndex = 19;
             this.hourlyRateLabel.Text = "\"Hourly Rate\"";
             // 
+            // logoutButton
+            // 
+            this.logoutButton.Location = new System.Drawing.Point(158, 447);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(121, 30);
+            this.logoutButton.TabIndex = 20;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            // 
             // EmployeeViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 590);
+            this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.hourlyRateLabel);
             this.Controls.Add(this.PTOdaysLabel);
             this.Controls.Add(this.netPayLabel);
@@ -289,5 +301,6 @@
         private System.Windows.Forms.Label netPayLabel;
         private System.Windows.Forms.Label PTOdaysLabel;
         private System.Windows.Forms.Label hourlyRateLabel;
+        private System.Windows.Forms.Button logoutButton;
     }
 }

@@ -73,5 +73,12 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
                 csv.SaveEmployees(path, employeees);
             }
         }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            LogInForm login = new LogInForm();
+            login.Show();
+            this.Close();
+        }
     }
 }
