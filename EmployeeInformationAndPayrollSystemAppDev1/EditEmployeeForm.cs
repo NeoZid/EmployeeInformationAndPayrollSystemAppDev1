@@ -52,7 +52,15 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             _employee.DateOfBirth = bdayTimePicker.Value;
             _employee.Department = departmentCb.Text;
             _employee.Role = roleCb.Text;
-            _employee.HourlyRate = double.Parse(hourlyRateTb.Text);
+            
+
+            if (!double.TryParse(hourlyRateTb.Text, out double hourlyRate) )
+            {
+                MessageBox.Show("Hourly Rate must be a number!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            _employee.HourlyRate = hourlyRate;
             _employee.HoursWorked = double.Parse(hoursWorkedTb.Text);
             _employee.PTODays = int.Parse(PTODaysTb.Text);
             string path = Application.StartupPath + "\\employees.csv";
@@ -69,8 +77,17 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
                 csv.SaveEmployees(path, employeees);
 
                 // For the database
-                DatabaseManager db = new DatabaseManager();
-                db.UpdateEmployee(_employee);
+                
+
+                try
+                {
+                    DatabaseManager db = new DatabaseManager();
+                    db.InsertEmployee(_employee);
+                }
+                catch
+                {
+                    Console.WriteLine("There was a problem with the database connection, using CSV file");
+                }
 
                 MessageBox.Show("Employee updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 

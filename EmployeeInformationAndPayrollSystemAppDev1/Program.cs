@@ -16,6 +16,18 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            // initialize the db on launch
+            try
+            {
+                DatabaseManager db = new DatabaseManager();
+                db.InitializeDatabase();
+            }
+            catch 
+            {
+                Console.WriteLine("Database connection failed");
+            }
+
             Application.Run(new LogInForm());
         }
     }

@@ -17,6 +17,33 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             return @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + dbPath + ";Integrated Security=True;Connect Timeout=30";
         }
 
+        public void InitializeDatabase()
+        {
+            using (SqlConnection conn = new SqlConnection(GetConnectionString()))
+            {
+                conn.Open();
+                string query = @"IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Employees' AND xtype='U')
+                CREATE TABLE Employees
+                (
+                    EmployeeId   NVARCHAR(10)  NOT NULL PRIMARY KEY,
+                    FirstName    NVARCHAR(50)  NOT NULL,
+                    LastName     NVARCHAR(50)  NOT NULL,
+                    DateOfBirth  DATE          NOT NULL,
+                    Email        NVARCHAR(100) NOT NULL,
+                    Password     NVARCHAR(50)  NOT NULL,
+                    Role         NVARCHAR(50)  NOT NULL,
+                    Department   NVARCHAR(50)  NOT NULL,
+                    HourlyRate   FLOAT         NOT NULL,
+                    HoursWorked  FLOAT         NOT NULL,
+                    PTODays      INT           NOT NULL
+                )";
+
+                SqlCommand cmd = new SqlCommand(query, conn);   
+                cmd.ExecuteNonQuery();
+                
+                    
+            }
+        }
 
         public void InsertEmployee(Employee emp)
         {

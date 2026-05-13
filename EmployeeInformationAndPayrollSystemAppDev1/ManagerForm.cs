@@ -26,8 +26,15 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             CsvManager csv = new CsvManager();
             List<Employee> employees = csv.LoadEmployees(path);
 
-            DatabaseManager db = new DatabaseManager();
-            db.SyncFromCsv(employees);
+            try
+            {
+                DatabaseManager db = new DatabaseManager();
+                db.SyncFromCsv(employees);
+            }
+            catch
+            {
+                Console.WriteLine("There was a problem with the database connection, saving to CSV file");
+            }
 
             LoadGrid();
         }
@@ -71,8 +78,16 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
                 csv.SaveEmployees(path, employees);
 
                 // Database
-                DatabaseManager db = new DatabaseManager();
-                db.DeleteEmployee(selected);
+                
+                try
+                {
+                    DatabaseManager db = new DatabaseManager();
+                    db.DeleteEmployee(selected);
+                }
+                catch
+                {
+                    Console.WriteLine("There was a problem with the database connection, using CSV file now");
+                }
 
                 LoadGrid();
             }

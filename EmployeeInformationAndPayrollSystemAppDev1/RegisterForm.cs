@@ -25,9 +25,18 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             CsvManager csv = new CsvManager();
             string path = Application.StartupPath + "\\employees.csv";
             List<Employee> employees = csv.LoadEmployees(path);
-            int employeeCount = employees.Count;
-            employeeCount++;
-            employeeIdTb.Text = "EMP" + employeeCount.ToString("D3");
+
+            int maxNumber = 0;
+            foreach (Employee emp in employees) 
+            {
+                int num = int.Parse(emp.EmployeeId.Replace("EMP",""));
+                if (num > maxNumber)
+                {
+                    maxNumber = num;
+                }
+            }
+            
+            employeeIdTb.Text = "EMP" + (maxNumber + 1).ToString("D3");
         }
 
         private void registerButton_Click(object sender, EventArgs e)
@@ -47,7 +56,13 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             string employeeId = employeeIdTb.Text;
             string department = departmentCb.Text;
             string role = roleCb.Text;
-            double hourlyRate = double.Parse(hourlyRateTb.Text);
+            if (!double.TryParse(hourlyRateTb.Text, out double hourlyRate))
+            {
+                MessageBox.Show("Hourly Rate must be a number!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+          
+            
             Employee employee1 = new Employee(firstName, lastName, employeeId, birthDay, email, password,role, department, hourlyRate);
 
             // For the csv
@@ -58,8 +73,15 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             csv.SaveEmployees(path, employees);
 
             // For the database
-            DatabaseManager db = new DatabaseManager();
-            db.InsertEmployee(employee1);
+            try 
+            {
+                DatabaseManager db = new DatabaseManager();
+                db.InsertEmployee(employee1);
+            } catch
+            {
+                Console.WriteLine("There was a problem with the database connection, using CSV file");
+            }
+            
 
             MessageBox.Show("Employee Register successfully!" , "Success", MessageBoxButtons.OK , MessageBoxIcon.Information);
             this.Close();
