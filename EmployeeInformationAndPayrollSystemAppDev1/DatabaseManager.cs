@@ -22,7 +22,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             using (SqlConnection conn = new SqlConnection(GetConnectionString()))
             {
                 conn.Open();
-                string query = @"IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Employees' AND xtype='U')
+                string query = @"IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Employees' AND xtype='U') 
                 CREATE TABLE Employees
                 (
                     EmployeeId   NVARCHAR(10)  NOT NULL PRIMARY KEY,
@@ -37,6 +37,10 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
                     HoursWorked  FLOAT         NOT NULL,
                     PTODays      INT           NOT NULL
                 )";
+
+                // Mental note:
+                // sysbojects = SQL's internal table that lists all db objects
+                // xtype='U' : U means User Table
 
                 SqlCommand cmd = new SqlCommand(query, conn);   
                 cmd.ExecuteNonQuery();

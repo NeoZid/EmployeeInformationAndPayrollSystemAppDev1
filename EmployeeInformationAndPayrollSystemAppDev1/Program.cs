@@ -17,7 +17,30 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // initialize the db on launch
+
+            // creating the mdf file if it doesnt exist
+
+            string dbPath = Application.StartupPath + "\\EIPS.mdf";
+            if (!System.IO.File.Exists(dbPath))
+            {
+                try
+                {
+                    string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Integrated Security=True";
+                    using (System.Data.SqlClient.SqlConnection conn =
+                        new System.Data.SqlClient.SqlConnection(connectionString))
+                    {
+                        conn.Open();
+                        string createDb = $"CREATE DATABASE EIPS ON PRIMARY (NAME='EIPS', FILENAME='{dbPath}')";
+                        System.Data.SqlClient.SqlCommand cmd =
+                            new System.Data.SqlClient.SqlCommand(createDb, conn);
+                        cmd.ExecuteNonQuery();
+                    }
+                } catch { }
+            }
+
+
+
+            // initialize the tables for the db on launch
             try
             {
                 DatabaseManager db = new DatabaseManager();
