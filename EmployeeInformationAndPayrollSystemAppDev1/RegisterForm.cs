@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -41,6 +42,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
 
         private void registerButton_Click(object sender, EventArgs e)
         {
+            string emailRegex = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"; // allowed characters before @, valid domain format and atleast 2 letter domain extension ex: .com/.ca/.org
             if (string.IsNullOrEmpty(fNameTb.Text) || string.IsNullOrEmpty(lNameTb.Text) || string.IsNullOrEmpty(emailTb.Text) || 
                 string.IsNullOrEmpty(passwordTb.Text) ||
                 string.IsNullOrEmpty(hourlyRateTb.Text) || roleCb.SelectedIndex == -1 || departmentCb.SelectedIndex == -1)
@@ -50,6 +52,11 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             }
             string firstName = fNameTb.Text;
             string lastName = lNameTb.Text;
+            if (!Regex.IsMatch(emailTb.Text, emailRegex))
+            {
+                MessageBox.Show("Email must have @, valid domain format and atleast 2 letter domain extension", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string email = emailTb.Text;
             string password = passwordTb.Text;
             DateTime birthDay = bdayTimePicker.Value;
