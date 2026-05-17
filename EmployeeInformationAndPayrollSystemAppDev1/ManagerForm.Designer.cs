@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.employeeDataView = new System.Windows.Forms.DataGridView();
             this.registerButton = new System.Windows.Forms.Button();
@@ -49,33 +49,33 @@
             // 
             // employeeDataView
             // 
+            resources.ApplyResources(this.employeeDataView, "employeeDataView");
             this.employeeDataView.AllowUserToAddRows = false;
             this.employeeDataView.AllowUserToDeleteRows = false;
             this.employeeDataView.AllowUserToResizeColumns = false;
             this.employeeDataView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.employeeDataView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.employeeDataView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.employeeDataView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.employeeDataView.BackgroundColor = System.Drawing.Color.SeaShell;
             this.employeeDataView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Snow;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.employeeDataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            resources.ApplyResources(this.employeeDataView, "employeeDataView");
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Snow;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employeeDataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.employeeDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.employeeDataView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.employeeDataView.DefaultCellStyle = dataGridViewCellStyle6;
             this.employeeDataView.EnableHeadersVisualStyles = false;
             this.employeeDataView.GridColor = System.Drawing.Color.LightGray;
             this.employeeDataView.MultiSelect = false;
@@ -87,8 +87,8 @@
             // 
             // registerButton
             // 
-            this.registerButton.BackColor = System.Drawing.Color.SlateBlue;
             resources.ApplyResources(this.registerButton, "registerButton");
+            this.registerButton.BackColor = System.Drawing.Color.SlateBlue;
             this.registerButton.ForeColor = System.Drawing.Color.White;
             this.registerButton.Name = "registerButton";
             this.registerButton.UseVisualStyleBackColor = false;
@@ -96,8 +96,8 @@
             // 
             // editButton
             // 
-            this.editButton.BackColor = System.Drawing.Color.CadetBlue;
             resources.ApplyResources(this.editButton, "editButton");
+            this.editButton.BackColor = System.Drawing.Color.CadetBlue;
             this.editButton.ForeColor = System.Drawing.Color.White;
             this.editButton.Name = "editButton";
             this.editButton.UseVisualStyleBackColor = false;
@@ -105,8 +105,8 @@
             // 
             // removeButton
             // 
-            this.removeButton.BackColor = System.Drawing.Color.CornflowerBlue;
             resources.ApplyResources(this.removeButton, "removeButton");
+            this.removeButton.BackColor = System.Drawing.Color.CornflowerBlue;
             this.removeButton.ForeColor = System.Drawing.Color.White;
             this.removeButton.Name = "removeButton";
             this.removeButton.UseVisualStyleBackColor = false;
@@ -114,8 +114,8 @@
             // 
             // logoutButton
             // 
-            this.logoutButton.BackColor = System.Drawing.Color.MidnightBlue;
             resources.ApplyResources(this.logoutButton, "logoutButton");
+            this.logoutButton.BackColor = System.Drawing.Color.MidnightBlue;
             this.logoutButton.ForeColor = System.Drawing.Color.White;
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.UseVisualStyleBackColor = false;

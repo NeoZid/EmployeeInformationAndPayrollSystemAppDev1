@@ -135,8 +135,8 @@
             // 
             // calculateButton
             // 
-            this.calculateButton.BackColor = System.Drawing.Color.Turquoise;
             resources.ApplyResources(this.calculateButton, "calculateButton");
+            this.calculateButton.BackColor = System.Drawing.Color.Turquoise;
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.UseVisualStyleBackColor = false;
             this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
@@ -163,8 +163,8 @@
             // 
             // logoutButton
             // 
-            this.logoutButton.BackColor = System.Drawing.Color.MidnightBlue;
             resources.ApplyResources(this.logoutButton, "logoutButton");
+            this.logoutButton.BackColor = System.Drawing.Color.MidnightBlue;
             this.logoutButton.ForeColor = System.Drawing.Color.White;
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.UseVisualStyleBackColor = false;
@@ -172,6 +172,7 @@
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.departmentLabel);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
@@ -180,13 +181,13 @@
             this.groupBox1.Controls.Add(this.nameLabel);
             this.groupBox1.Controls.Add(this.idLabel);
             this.groupBox1.Controls.Add(this.roleLabel);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // groupBox2
             // 
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.netPayLabel);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
@@ -198,7 +199,6 @@
             this.groupBox2.Controls.Add(this.grossPayLabel);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.calculateButton);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
@@ -210,19 +210,19 @@
             // 
             // groupBox3
             // 
+            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Controls.Add(this.changePwBtn);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.confirmPasswordTb);
             this.groupBox3.Controls.Add(this.newPasswordTb);
-            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
             // changePwBtn
             // 
-            this.changePwBtn.BackColor = System.Drawing.Color.Turquoise;
             resources.ApplyResources(this.changePwBtn, "changePwBtn");
+            this.changePwBtn.BackColor = System.Drawing.Color.Turquoise;
             this.changePwBtn.Name = "changePwBtn";
             this.changePwBtn.UseVisualStyleBackColor = false;
             this.changePwBtn.Click += new System.EventHandler(this.changePwBtn_Click);

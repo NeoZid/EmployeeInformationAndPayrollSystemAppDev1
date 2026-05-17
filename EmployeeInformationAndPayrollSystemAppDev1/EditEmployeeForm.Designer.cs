@@ -65,6 +65,7 @@
             // 
             // departmentCb
             // 
+            resources.ApplyResources(this.departmentCb, "departmentCb");
             this.departmentCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.departmentCb.FormattingEnabled = true;
             this.departmentCb.Items.AddRange(new object[] {
@@ -72,7 +73,6 @@
             resources.GetString("departmentCb.Items1"),
             resources.GetString("departmentCb.Items2"),
             resources.GetString("departmentCb.Items3")});
-            resources.ApplyResources(this.departmentCb, "departmentCb");
             this.departmentCb.Name = "departmentCb";
             // 
             // emailTb
@@ -82,8 +82,8 @@
             // 
             // editButton
             // 
-            this.editButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             resources.ApplyResources(this.editButton, "editButton");
+            this.editButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.editButton.Name = "editButton";
             this.editButton.TabStop = false;
             this.editButton.UseVisualStyleBackColor = false;
@@ -106,6 +106,7 @@
             // 
             // roleCb
             // 
+            resources.ApplyResources(this.roleCb, "roleCb");
             this.roleCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.roleCb.FormattingEnabled = true;
             this.roleCb.Items.AddRange(new object[] {
@@ -117,7 +118,6 @@
             resources.GetString("roleCb.Items5"),
             resources.GetString("roleCb.Items6"),
             resources.GetString("roleCb.Items7")});
-            resources.ApplyResources(this.roleCb, "roleCb");
             this.roleCb.Name = "roleCb";
             // 
             // label6
@@ -137,8 +137,8 @@
             // 
             // bdayTimePicker
             // 
-            this.bdayTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.bdayTimePicker, "bdayTimePicker");
+            this.bdayTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bdayTimePicker.Name = "bdayTimePicker";
             // 
             // label4
@@ -183,8 +183,8 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.BackColor = System.Drawing.SystemColors.GrayText;
             resources.ApplyResources(this.cancelButton, "cancelButton");
+            this.cancelButton.BackColor = System.Drawing.SystemColors.GrayText;
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);

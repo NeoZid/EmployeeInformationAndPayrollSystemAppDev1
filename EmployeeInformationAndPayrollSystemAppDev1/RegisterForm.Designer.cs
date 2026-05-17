@@ -101,8 +101,8 @@
             // 
             // bdayTimePicker
             // 
-            this.bdayTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             resources.ApplyResources(this.bdayTimePicker, "bdayTimePicker");
+            this.bdayTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bdayTimePicker.Name = "bdayTimePicker";
             // 
             // employeeIdTb
@@ -123,6 +123,7 @@
             // 
             // roleCb
             // 
+            resources.ApplyResources(this.roleCb, "roleCb");
             this.roleCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.roleCb.FormattingEnabled = true;
             this.roleCb.Items.AddRange(new object[] {
@@ -134,7 +135,6 @@
             resources.GetString("roleCb.Items5"),
             resources.GetString("roleCb.Items6"),
             resources.GetString("roleCb.Items7")});
-            resources.ApplyResources(this.roleCb, "roleCb");
             this.roleCb.Name = "roleCb";
             // 
             // label7
@@ -154,8 +154,8 @@
             // 
             // registerButton
             // 
-            this.registerButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             resources.ApplyResources(this.registerButton, "registerButton");
+            this.registerButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.registerButton.ForeColor = System.Drawing.Color.White;
             this.registerButton.Name = "registerButton";
             this.registerButton.UseVisualStyleBackColor = false;
@@ -168,6 +168,7 @@
             // 
             // departmentCb
             // 
+            resources.ApplyResources(this.departmentCb, "departmentCb");
             this.departmentCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.departmentCb.FormattingEnabled = true;
             this.departmentCb.Items.AddRange(new object[] {
@@ -175,7 +176,6 @@
             resources.GetString("departmentCb.Items1"),
             resources.GetString("departmentCb.Items2"),
             resources.GetString("departmentCb.Items3")});
-            resources.ApplyResources(this.departmentCb, "departmentCb");
             this.departmentCb.Name = "departmentCb";
             // 
             // passwordTb
@@ -190,8 +190,8 @@
             // 
             // cancelBtn
             // 
-            this.cancelBtn.BackColor = System.Drawing.SystemColors.GrayText;
             resources.ApplyResources(this.cancelBtn, "cancelBtn");
+            this.cancelBtn.BackColor = System.Drawing.SystemColors.GrayText;
             this.cancelBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.UseVisualStyleBackColor = false;
