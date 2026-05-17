@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace EmployeeInformationAndPayrollSystemAppDev1
 {
+    
     public partial class LogInForm : Form
     {
+        public static int SelectedLanguageIndex = 0;
         private bool _isLoading = true;
         public LogInForm()
         {
@@ -22,7 +24,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
         private void LogInForm_Load(object sender, EventArgs e)
         {
             _isLoading = true;
-            languageCb.SelectedIndex = 0;
+            languageCb.SelectedIndex = SelectedLanguageIndex;
             _isLoading = false;
         }
 
@@ -87,7 +89,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
         private void languageCb_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (_isLoading) return;
-
+            SelectedLanguageIndex = languageCb.SelectedIndex;
             int selectedIndex = languageCb.SelectedIndex;
             string culture = "en";
 
