@@ -71,6 +71,7 @@
             // 
             // departmentCb
             // 
+            this.departmentCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.departmentCb.FormattingEnabled = true;
             this.departmentCb.Items.AddRange(new object[] {
             "Finance",
@@ -131,6 +132,7 @@
             // 
             // roleCb
             // 
+            this.roleCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.roleCb.FormattingEnabled = true;
             this.roleCb.Items.AddRange(new object[] {
             "Accountant",

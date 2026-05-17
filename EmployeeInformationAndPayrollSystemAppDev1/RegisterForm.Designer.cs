@@ -50,6 +50,7 @@
             this.departmentCb = new System.Windows.Forms.ComboBox();
             this.passwordTb = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.cancelBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // registerTitle
@@ -174,6 +175,7 @@
             // 
             // roleCb
             // 
+            this.roleCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.roleCb.FormattingEnabled = true;
             this.roleCb.Items.AddRange(new object[] {
             "Accountant",
@@ -238,6 +240,7 @@
             // 
             // departmentCb
             // 
+            this.departmentCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.departmentCb.FormattingEnabled = true;
             this.departmentCb.Items.AddRange(new object[] {
             "Finance",
@@ -266,6 +269,19 @@
             this.label9.TabIndex = 25;
             this.label9.Text = "Password";
             // 
+            // cancelBtn
+            // 
+            this.cancelBtn.BackColor = System.Drawing.SystemColors.GrayText;
+            this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelBtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.cancelBtn.Location = new System.Drawing.Point(226, 488);
+            this.cancelBtn.Name = "cancelBtn";
+            this.cancelBtn.Size = new System.Drawing.Size(172, 29);
+            this.cancelBtn.TabIndex = 26;
+            this.cancelBtn.Text = "Cancel";
+            this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,6 +289,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(625, 593);
+            this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.passwordTb);
             this.Controls.Add(this.departmentCb);
@@ -330,5 +347,6 @@
         private System.Windows.Forms.ComboBox departmentCb;
         private System.Windows.Forms.TextBox passwordTb;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button cancelBtn;
     }
 }

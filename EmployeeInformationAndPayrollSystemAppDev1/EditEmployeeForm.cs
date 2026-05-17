@@ -39,9 +39,15 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
 
         private void editButton_Click(object sender, EventArgs e)
         {
+            // load employees first to check duplicates
+            string path = Application.StartupPath + "\\employees.csv";
+            CsvManager csv = new CsvManager();
+            List<Employee> employees = csv.LoadEmployees(path);
 
-            string emailRegex = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"; // allowed characters before @, valid domain format and atleast 2 letter domain extension ex: .com/.ca/.org
+            string emailRegex = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"; 
+            // allowed characters before @, valid domain format and atleast 2 letter domain extension ex: .com/.ca/.org
 
+            // validate empty spaces
             if (string.IsNullOrWhiteSpace(fNameTb.Text) || string.IsNullOrWhiteSpace(lNameTb.Text) || string.IsNullOrWhiteSpace(emailTb.Text)  
                 || string.IsNullOrWhiteSpace(PTODaysTb.Text) || string.IsNullOrWhiteSpace(hoursWorkedTb.Text) ||
                 string.IsNullOrWhiteSpace(hourlyRateTb.Text) || departmentCb.SelectedIndex == -1 || roleCb.SelectedIndex == -1)
@@ -50,81 +56,125 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
                 return;
             }
 
-            if (fNameTb.Text.Length < 2 || lNameTb.Text.Length < 2)
+            // validate first name,lname = letters, and allowed spaced last names and hypens
+            if (!fNameTb.Text.All(c => char.IsLetter(c) || c == ' ' || c == '-'))
             {
-                MessageBox.Show("First and Last name must be at least 2 characters.");
+                MessageBox.Show("First name can only contain letters.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
             _employee.FirstName = fNameTb.Text;
+            if (!lNameTb.Text.All(c => char.IsLetter(c) || c == ' ' || c == '-'))
+            {
+                MessageBox.Show("Last name can only contain letters.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             _employee.LastName = lNameTb.Text;
 
+            // validate email
             if (!Regex.IsMatch(emailTb.Text, emailRegex))
             {
                 MessageBox.Show("Email must have @, valid domain format and atleast 2 letter domain extension", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            _employee.Email = emailTb.Text;
-            _employee.DateOfBirth = bdayTimePicker.Value;
-            _employee.Department = departmentCb.Text;
-            _employee.Role = roleCb.Text;
-            
-
-            if (!double.TryParse(hourlyRateTb.Text, out double hourlyRate) )
+            // validate same email
+            if (employees.Any(emp => emp.Email == emailTb.Text && emp.EmployeeId != _employee.EmployeeId))
             {
-                MessageBox.Show("Hourly Rate must be a number!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("An employee with this email already exists!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            _employee.Email = emailTb.Text;
 
-            _employee.HourlyRate = hourlyRate;
-            if (!double.TryParse(hoursWorkedTb.Text, out double hoursWorked))
+
+            // validate bday, cant be in future or too old
+            if (bdayTimePicker.Value > DateTime.Now)
             {
-                MessageBox.Show("Hours Worked must be a number!", "Invalid Input",
+                MessageBox.Show("Date birth cannot be in the future", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (bdayTimePicker.Value < DateTime.Now.AddYears(-100))
+            {
+                MessageBox.Show("Enter a valid date of birth", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            _employee.DateOfBirth = bdayTimePicker.Value;
+
+
+            _employee.Department = departmentCb.Text;
+            _employee.Role = roleCb.Text;
+
+            // validate hourlyRate, should only be numbers / greater than 0 / accept only digits/single period // 25.50
+            if (!Regex.IsMatch(hourlyRateTb.Text, @"^\d+(\.\d{1,2})?$"))
+            {
+                MessageBox.Show("Hourly Rate must be a valid number. Example: 25 or 25.50", "Invalid Input",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (hoursWorked < 0 || hoursWorked > 80)
+            double.TryParse(hourlyRateTb.Text, out double hourlyRate);
+            if (hourlyRate <= 0)
             {
-                MessageBox.Show("Hours Worked must be between 0 and 80.");
+                MessageBox.Show("Hourly Rate must be greater than 0!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (hourlyRate > 500)
+            {
+                MessageBox.Show("Hourly Rate cannot exceed 500$ per hour!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            _employee.HourlyRate = hourlyRate;
+
+
+            // validate hours worked, must be a number
+            if (!Regex.IsMatch(hoursWorkedTb.Text, @"^\d+(\.\d+)?$"))
+            {
+                MessageBox.Show("Hours Worked must be a valid number. Example: 40 or 37.5", "Invalid Input",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            double.TryParse(hoursWorkedTb.Text, out double hoursWorked);
+            // between 0 and 80 only
+            if (hoursWorked > 80)
+            {
+                MessageBox.Show("Hours Worked must be between 0 and 80.", "Invalid Input",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             _employee.HoursWorked = hoursWorked;
 
-            if (!int.TryParse(PTODaysTb.Text, out int PTODays))
+
+            // validate pto days, must be number and must be between 0 or 365
+            if (!Regex.IsMatch(PTODaysTb.Text, @"^\d+$")) // whole numbers only
             {
-                MessageBox.Show("PTO Days must be a number!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("PTO Days must be a whole number. Example: 10", "Invalid Input",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            int.TryParse(PTODaysTb.Text, out int PTODays);
             if (PTODays < 0 || PTODays > 365)
             {
-                MessageBox.Show("PTO Days must be between 0 and 365.");
+                MessageBox.Show("PTO Days must be between 0 and 365.", "Invalid Input",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             _employee.PTODays = PTODays;
 
 
-
-
-            string path = Application.StartupPath + "\\employees.csv";
-            CsvManager csv = new CsvManager();
-            List<Employee> employeees = csv.LoadEmployees(path);
             // finds the employee chosen 
-            int index = employeees.FindIndex(emp => emp.EmployeeId == _employee.EmployeeId);
+            int index = employees.FindIndex(emp => emp.EmployeeId == _employee.EmployeeId);
 
             if (index >= 0)
             {
                 // once found, we replace it and save
                 // For the CSV file
-                employeees[index] = _employee;
-                csv.SaveEmployees(path, employeees);
+                employees[index] = _employee;
+                csv.SaveEmployees(path, employees);
 
                 // For the database
-                
+
 
                 try
                 {
                     DatabaseManager db = new DatabaseManager();
-                    db.InsertEmployee(_employee);
+                    db.UpdateEmployee(_employee);
                 }
                 catch
                 {
@@ -132,8 +182,13 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
                 }
 
                 MessageBox.Show("Employee updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+
                 this.Close();
+            }
+            else 
+            {
+                MessageBox.Show("Employee not found. Please try again.", "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -51,8 +51,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.newPasswordTb = new System.Windows.Forms.TextBox();
+            this.confirmPasswordTb = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.changePwBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -197,7 +204,7 @@
             // calculateButton
             // 
             this.calculateButton.BackColor = System.Drawing.Color.Turquoise;
-            this.calculateButton.Location = new System.Drawing.Point(165, 233);
+            this.calculateButton.Location = new System.Drawing.Point(260, 237);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(134, 40);
             this.calculateButton.TabIndex = 14;
@@ -248,8 +255,9 @@
             // logoutButton
             // 
             this.logoutButton.BackColor = System.Drawing.Color.MidnightBlue;
+            this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.ForeColor = System.Drawing.Color.White;
-            this.logoutButton.Location = new System.Drawing.Point(348, 233);
+            this.logoutButton.Location = new System.Drawing.Point(538, 851);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(134, 40);
             this.logoutButton.TabIndex = 20;
@@ -280,7 +288,6 @@
             // 
             this.groupBox2.Controls.Add(this.netPayLabel);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.logoutButton);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.hourlyRateLabel);
             this.groupBox2.Controls.Add(this.label7);
@@ -309,13 +316,75 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "Employee Portal";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.changePwBtn);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.confirmPasswordTb);
+            this.groupBox3.Controls.Add(this.newPasswordTb);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(16, 607);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(656, 223);
+            this.groupBox3.TabIndex = 24;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Change Password";
+            // 
+            // newPasswordTb
+            // 
+            this.newPasswordTb.Location = new System.Drawing.Point(231, 51);
+            this.newPasswordTb.Name = "newPasswordTb";
+            this.newPasswordTb.Size = new System.Drawing.Size(194, 25);
+            this.newPasswordTb.TabIndex = 0;
+            this.newPasswordTb.UseSystemPasswordChar = true;
+            // 
+            // confirmPasswordTb
+            // 
+            this.confirmPasswordTb.Location = new System.Drawing.Point(231, 105);
+            this.confirmPasswordTb.Name = "confirmPasswordTb";
+            this.confirmPasswordTb.Size = new System.Drawing.Size(194, 25);
+            this.confirmPasswordTb.TabIndex = 1;
+            this.confirmPasswordTb.UseSystemPasswordChar = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(231, 32);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(97, 17);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "New Password";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(231, 83);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(120, 17);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Confirm Password";
+            // 
+            // changePwBtn
+            // 
+            this.changePwBtn.BackColor = System.Drawing.Color.Turquoise;
+            this.changePwBtn.Location = new System.Drawing.Point(260, 149);
+            this.changePwBtn.Name = "changePwBtn";
+            this.changePwBtn.Size = new System.Drawing.Size(134, 40);
+            this.changePwBtn.TabIndex = 15;
+            this.changePwBtn.Text = "Change Password";
+            this.changePwBtn.UseVisualStyleBackColor = false;
+            this.changePwBtn.Click += new System.EventHandler(this.changePwBtn_Click);
+            // 
             // EmployeeViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(684, 608);
+            this.ClientSize = new System.Drawing.Size(684, 914);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label10);
+            this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -328,6 +397,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,5 +429,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox newPasswordTb;
+        private System.Windows.Forms.TextBox confirmPasswordTb;
+        private System.Windows.Forms.Button changePwBtn;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
     }
 }

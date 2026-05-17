@@ -45,6 +45,9 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             string path = Application.StartupPath + "\\employees.csv"; // always points to bin/Debug folder 
             List<Employee> employees = csv.LoadEmployees(path);
             employeeDataView.DataSource = employees;
+
+            // hide sensitive data
+            employeeDataView.Columns["Password"].Visible = false;
         }
 
         private void registerButton_Click(object sender, EventArgs e)
