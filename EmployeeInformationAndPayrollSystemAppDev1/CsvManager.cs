@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace EmployeeInformationAndPayrollSystemAppDev1
 {
@@ -22,10 +23,12 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             for (int i = 1; i < lines.Length; i++) // skip first line as thats the header
             {
                 string[] values = lines[i].Split(','); // associates values of each string in  the array  by splitting , 
-                Employee e = new Employee(values[0], values[1], values[2], DateTime.Parse(values[3]), values[4], 
-                    values[5], values[6], values[7], double.Parse(values[8]));
-                e.HoursWorked = double.Parse(values[9]);
-                e.PTODays = int.Parse(values[10]);
+                Employee e = new Employee(values[0], values[1], values[2],
+                            DateTime.Parse(values[3], CultureInfo.InvariantCulture),
+                            values[4], values[5], values[6], values[7],
+                            double.Parse(values[8], CultureInfo.InvariantCulture));
+                            e.HoursWorked = double.Parse(values[9], CultureInfo.InvariantCulture);
+                            e.PTODays = int.Parse(values[10], CultureInfo.InvariantCulture);
                 employees.Add(e);
             }
 
@@ -40,8 +43,13 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
 
             foreach (Employee e in employees) // everything gets converted back into the string, the opposite of LoadEmployees
             {
-                string line = $"{e.FirstName},{e.LastName},{e.EmployeeId},{e.DateOfBirth.ToString("yyyy-MM-dd")},{e.Email},{e.Password},{e.Role},{e.Department},{e.HourlyRate},{e.HoursWorked},{e.PTODays}";
-                lines.Add(line);   
+                string line = $"{e.FirstName},{e.LastName},{e.EmployeeId}," +
+                            $"{e.DateOfBirth.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)}," +
+                            $"{e.Email},{e.Password},{e.Role},{e.Department}," +
+                            $"{e.HourlyRate.ToString(CultureInfo.InvariantCulture)}," +
+                            $"{e.HoursWorked.ToString(CultureInfo.InvariantCulture)}," +
+                            $"{e.PTODays}";
+                lines.Add(line);
             }
 
             File.WriteAllLines(filePath, lines);

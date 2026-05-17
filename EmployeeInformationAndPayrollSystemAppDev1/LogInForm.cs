@@ -12,12 +12,19 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
 {
     public partial class LogInForm : Form
     {
+        private bool _isLoading = true;
         public LogInForm()
         {
             InitializeComponent();
+            
         }
 
-        
+        private void LogInForm_Load(object sender, EventArgs e)
+        {
+            _isLoading = true;
+            languageCb.SelectedIndex = 0;
+            _isLoading = false;
+        }
 
         private void signInButton_Click(object sender, EventArgs e)
             
@@ -77,6 +84,33 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             }
         }
 
-        
+        private void languageCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (_isLoading) return;
+
+            int selectedIndex = languageCb.SelectedIndex;
+            string culture = "en";
+
+            if (languageCb.SelectedItem.ToString() == "Français")
+            {
+                culture = "fr-CA";
+            } else if (languageCb.SelectedItem.ToString() == "Español") {
+                culture = "es";
+            }
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(culture);
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(culture);
+
+            LogInForm newForm = new LogInForm();
+            newForm.Show();
+            newForm.SetLanguageIndex(selectedIndex);
+            this.Hide();
+        }
+
+        public void SetLanguageIndex(int index)
+        {
+            _isLoading = true;
+            languageCb.SelectedIndex = index;
+            _isLoading = false;
+        }
     }
 }

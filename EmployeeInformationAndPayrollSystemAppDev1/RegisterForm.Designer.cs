@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.registerTitle = new System.Windows.Forms.Label();
             this.infoLabel = new System.Windows.Forms.Label();
             this.fNameTb = new System.Windows.Forms.TextBox();
@@ -55,240 +56,153 @@
             // 
             // registerTitle
             // 
-            this.registerTitle.AutoSize = true;
-            this.registerTitle.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerTitle.Location = new System.Drawing.Point(188, 31);
+            resources.ApplyResources(this.registerTitle, "registerTitle");
             this.registerTitle.Name = "registerTitle";
-            this.registerTitle.Size = new System.Drawing.Size(249, 37);
-            this.registerTitle.TabIndex = 0;
-            this.registerTitle.Text = "Registration Form";
             // 
             // infoLabel
             // 
-            this.infoLabel.AutoSize = true;
-            this.infoLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoLabel.Location = new System.Drawing.Point(190, 70);
+            resources.ApplyResources(this.infoLabel, "infoLabel");
             this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(244, 17);
-            this.infoLabel.TabIndex = 1;
-            this.infoLabel.Text = "Fill out the form carefully for registration";
             // 
             // fNameTb
             // 
-            this.fNameTb.Location = new System.Drawing.Point(121, 150);
+            resources.ApplyResources(this.fNameTb, "fNameTb");
             this.fNameTb.Name = "fNameTb";
-            this.fNameTb.Size = new System.Drawing.Size(162, 20);
-            this.fNameTb.TabIndex = 2;
             // 
             // lNameTb
             // 
-            this.lNameTb.Location = new System.Drawing.Point(333, 150);
+            resources.ApplyResources(this.lNameTb, "lNameTb");
             this.lNameTb.Name = "lNameTb";
-            this.lNameTb.Size = new System.Drawing.Size(162, 20);
-            this.lNameTb.TabIndex = 3;
             // 
             // employeeInfo
             // 
-            this.employeeInfo.AutoSize = true;
-            this.employeeInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeInfo.Location = new System.Drawing.Point(118, 117);
+            resources.ApplyResources(this.employeeInfo, "employeeInfo");
             this.employeeInfo.Name = "employeeInfo";
-            this.employeeInfo.Size = new System.Drawing.Size(182, 21);
-            this.employeeInfo.TabIndex = 5;
-            this.employeeInfo.Text = "Employee Information";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(118, 173);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 17);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "First Name";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(330, 173);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Last Name";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(118, 231);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 17);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Email";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(330, 231);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 17);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Date of Birth";
             // 
             // bdayTimePicker
             // 
             this.bdayTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.bdayTimePicker.Location = new System.Drawing.Point(333, 208);
+            resources.ApplyResources(this.bdayTimePicker, "bdayTimePicker");
             this.bdayTimePicker.Name = "bdayTimePicker";
-            this.bdayTimePicker.Size = new System.Drawing.Size(158, 20);
-            this.bdayTimePicker.TabIndex = 12;
             // 
             // employeeIdTb
             // 
-            this.employeeIdTb.Location = new System.Drawing.Point(232, 285);
+            resources.ApplyResources(this.employeeIdTb, "employeeIdTb");
             this.employeeIdTb.Name = "employeeIdTb";
             this.employeeIdTb.ReadOnly = true;
-            this.employeeIdTb.Size = new System.Drawing.Size(161, 20);
-            this.employeeIdTb.TabIndex = 13;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(260, 308);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 17);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Employee ID";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(331, 364);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 17);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Department";
             // 
             // roleCb
             // 
             this.roleCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.roleCb.FormattingEnabled = true;
             this.roleCb.Items.AddRange(new object[] {
-            "Accountant",
-            "Budget Analyst",
-            "Software Developer",
-            "IT Support",
-            "Content Creator",
-            "Marketing Specialist",
-            "Manager",
-            "Team Lead"});
-            this.roleCb.Location = new System.Drawing.Point(121, 394);
+            resources.GetString("roleCb.Items"),
+            resources.GetString("roleCb.Items1"),
+            resources.GetString("roleCb.Items2"),
+            resources.GetString("roleCb.Items3"),
+            resources.GetString("roleCb.Items4"),
+            resources.GetString("roleCb.Items5"),
+            resources.GetString("roleCb.Items6"),
+            resources.GetString("roleCb.Items7")});
+            resources.ApplyResources(this.roleCb, "roleCb");
             this.roleCb.Name = "roleCb";
-            this.roleCb.Size = new System.Drawing.Size(161, 21);
-            this.roleCb.TabIndex = 17;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(118, 418);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 17);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Role/Title";
             // 
             // hourlyRateTb
             // 
-            this.hourlyRateTb.Location = new System.Drawing.Point(333, 395);
+            resources.ApplyResources(this.hourlyRateTb, "hourlyRateTb");
             this.hourlyRateTb.Name = "hourlyRateTb";
-            this.hourlyRateTb.Size = new System.Drawing.Size(158, 20);
-            this.hourlyRateTb.TabIndex = 19;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(330, 418);
+            resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 17);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Hourly Rate";
             // 
             // registerButton
             // 
             this.registerButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.registerButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.registerButton, "registerButton");
             this.registerButton.ForeColor = System.Drawing.Color.White;
-            this.registerButton.Location = new System.Drawing.Point(226, 450);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(172, 32);
-            this.registerButton.TabIndex = 21;
-            this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = false;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // emailTb
             // 
-            this.emailTb.Location = new System.Drawing.Point(121, 208);
+            resources.ApplyResources(this.emailTb, "emailTb");
             this.emailTb.Name = "emailTb";
-            this.emailTb.Size = new System.Drawing.Size(161, 20);
-            this.emailTb.TabIndex = 22;
             // 
             // departmentCb
             // 
             this.departmentCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.departmentCb.FormattingEnabled = true;
             this.departmentCb.Items.AddRange(new object[] {
-            "Finance",
-            "Information Technology",
-            "Marketing",
-            "Management"});
-            this.departmentCb.Location = new System.Drawing.Point(333, 340);
+            resources.GetString("departmentCb.Items"),
+            resources.GetString("departmentCb.Items1"),
+            resources.GetString("departmentCb.Items2"),
+            resources.GetString("departmentCb.Items3")});
+            resources.ApplyResources(this.departmentCb, "departmentCb");
             this.departmentCb.Name = "departmentCb";
-            this.departmentCb.Size = new System.Drawing.Size(158, 21);
-            this.departmentCb.TabIndex = 23;
             // 
             // passwordTb
             // 
-            this.passwordTb.Location = new System.Drawing.Point(121, 341);
+            resources.ApplyResources(this.passwordTb, "passwordTb");
             this.passwordTb.Name = "passwordTb";
-            this.passwordTb.Size = new System.Drawing.Size(161, 20);
-            this.passwordTb.TabIndex = 24;
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(118, 364);
+            resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 17);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Password";
             // 
             // cancelBtn
             // 
             this.cancelBtn.BackColor = System.Drawing.SystemColors.GrayText;
-            this.cancelBtn.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.cancelBtn, "cancelBtn");
             this.cancelBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.cancelBtn.Location = new System.Drawing.Point(226, 488);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(172, 29);
-            this.cancelBtn.TabIndex = 26;
-            this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(625, 593);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.passwordTb);
@@ -315,8 +229,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "RegisterForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RegisterForm";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

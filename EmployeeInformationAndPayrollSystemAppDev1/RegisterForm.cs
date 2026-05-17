@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace EmployeeInformationAndPayrollSystemAppDev1
 {
@@ -30,7 +31,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             int maxNumber = 0;
             foreach (Employee emp in employees) 
             {
-                int num = int.Parse(emp.EmployeeId.Replace("EMP",""));
+                int num = int.Parse(emp.EmployeeId.Replace("EMP",""), CultureInfo.InvariantCulture);
                 if (num > maxNumber)
                 {
                     maxNumber = num;
@@ -121,7 +122,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            double.TryParse(hourlyRateTb.Text, out double hourlyRate);
+            double.TryParse(hourlyRateTb.Text, NumberStyles.Number, CultureInfo.InvariantCulture, out double hourlyRate);
             if (hourlyRate <= 0)
             {
                 MessageBox.Show("Hourly Rate must be greater than 0!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditEmployeeForm));
             this.label9 = new System.Windows.Forms.Label();
             this.hoursWorkedTb = new System.Windows.Forms.TextBox();
             this.departmentCb = new System.Windows.Forms.ComboBox();
@@ -54,227 +55,145 @@
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 335);
+            resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(97, 17);
-            this.label9.TabIndex = 47;
-            this.label9.Text = "Hours Worked";
             // 
             // hoursWorkedTb
             // 
-            this.hoursWorkedTb.Location = new System.Drawing.Point(12, 312);
+            resources.ApplyResources(this.hoursWorkedTb, "hoursWorkedTb");
             this.hoursWorkedTb.Name = "hoursWorkedTb";
-            this.hoursWorkedTb.Size = new System.Drawing.Size(161, 20);
-            this.hoursWorkedTb.TabIndex = 46;
             // 
             // departmentCb
             // 
             this.departmentCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.departmentCb.FormattingEnabled = true;
             this.departmentCb.Items.AddRange(new object[] {
-            "Finance",
-            "Information Technology",
-            "Marketing",
-            "Management"});
-            this.departmentCb.Location = new System.Drawing.Point(452, 258);
+            resources.GetString("departmentCb.Items"),
+            resources.GetString("departmentCb.Items1"),
+            resources.GetString("departmentCb.Items2"),
+            resources.GetString("departmentCb.Items3")});
+            resources.ApplyResources(this.departmentCb, "departmentCb");
             this.departmentCb.Name = "departmentCb";
-            this.departmentCb.Size = new System.Drawing.Size(161, 21);
-            this.departmentCb.TabIndex = 45;
             // 
             // emailTb
             // 
-            this.emailTb.Location = new System.Drawing.Point(452, 204);
+            resources.ApplyResources(this.emailTb, "emailTb");
             this.emailTb.Name = "emailTb";
-            this.emailTb.Size = new System.Drawing.Size(161, 20);
-            this.emailTb.TabIndex = 44;
             // 
             // editButton
             // 
             this.editButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.editButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.Location = new System.Drawing.Point(226, 388);
+            resources.ApplyResources(this.editButton, "editButton");
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(172, 34);
-            this.editButton.TabIndex = 43;
             this.editButton.TabStop = false;
-            this.editButton.Text = "Confirm Edit";
             this.editButton.UseVisualStyleBackColor = false;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(449, 336);
+            resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 17);
-            this.label8.TabIndex = 42;
-            this.label8.Text = "Hourly Rate";
             // 
             // hourlyRateTb
             // 
-            this.hourlyRateTb.Location = new System.Drawing.Point(452, 313);
+            resources.ApplyResources(this.hourlyRateTb, "hourlyRateTb");
             this.hourlyRateTb.Name = "hourlyRateTb";
-            this.hourlyRateTb.Size = new System.Drawing.Size(158, 20);
-            this.hourlyRateTb.TabIndex = 41;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(228, 336);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 17);
-            this.label7.TabIndex = 40;
-            this.label7.Text = "Role/Title";
             // 
             // roleCb
             // 
             this.roleCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.roleCb.FormattingEnabled = true;
             this.roleCb.Items.AddRange(new object[] {
-            "Accountant",
-            "Budget Analyst",
-            "Software Developer",
-            "IT Support",
-            "Content Creator",
-            "Marketing Specialist",
-            "Manager",
-            "Team Lead"});
-            this.roleCb.Location = new System.Drawing.Point(230, 312);
+            resources.GetString("roleCb.Items"),
+            resources.GetString("roleCb.Items1"),
+            resources.GetString("roleCb.Items2"),
+            resources.GetString("roleCb.Items3"),
+            resources.GetString("roleCb.Items4"),
+            resources.GetString("roleCb.Items5"),
+            resources.GetString("roleCb.Items6"),
+            resources.GetString("roleCb.Items7")});
+            resources.ApplyResources(this.roleCb, "roleCb");
             this.roleCb.Name = "roleCb";
-            this.roleCb.Size = new System.Drawing.Size(161, 21);
-            this.roleCb.TabIndex = 39;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(449, 282);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 17);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Department";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(230, 282);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 17);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "PTO Days";
             // 
             // PTODaysTb
             // 
-            this.PTODaysTb.Location = new System.Drawing.Point(230, 259);
+            resources.ApplyResources(this.PTODaysTb, "PTODaysTb");
             this.PTODaysTb.Name = "PTODaysTb";
-            this.PTODaysTb.Size = new System.Drawing.Size(163, 20);
-            this.PTODaysTb.TabIndex = 36;
             // 
             // bdayTimePicker
             // 
             this.bdayTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.bdayTimePicker.Location = new System.Drawing.Point(12, 259);
+            resources.ApplyResources(this.bdayTimePicker, "bdayTimePicker");
             this.bdayTimePicker.Name = "bdayTimePicker";
-            this.bdayTimePicker.Size = new System.Drawing.Size(162, 20);
-            this.bdayTimePicker.TabIndex = 35;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 282);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 17);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Date of Birth";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(449, 227);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 17);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Email";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(230, 227);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Last Name";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 227);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 17);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "First Name";
             // 
             // employeeInfo
             // 
-            this.employeeInfo.AutoSize = true;
-            this.employeeInfo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeInfo.Location = new System.Drawing.Point(230, 159);
+            resources.ApplyResources(this.employeeInfo, "employeeInfo");
             this.employeeInfo.Name = "employeeInfo";
-            this.employeeInfo.Size = new System.Drawing.Size(166, 20);
-            this.employeeInfo.TabIndex = 30;
-            this.employeeInfo.Text = "Employee Information";
             // 
             // lNameTb
             // 
-            this.lNameTb.Location = new System.Drawing.Point(231, 204);
+            resources.ApplyResources(this.lNameTb, "lNameTb");
             this.lNameTb.Name = "lNameTb";
-            this.lNameTb.Size = new System.Drawing.Size(162, 20);
-            this.lNameTb.TabIndex = 29;
             // 
             // fNameTb
             // 
-            this.fNameTb.Location = new System.Drawing.Point(12, 204);
+            resources.ApplyResources(this.fNameTb, "fNameTb");
             this.fNameTb.Name = "fNameTb";
-            this.fNameTb.Size = new System.Drawing.Size(162, 20);
-            this.fNameTb.TabIndex = 28;
             // 
             // editTitle
             // 
-            this.editTitle.AutoSize = true;
-            this.editTitle.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editTitle.Location = new System.Drawing.Point(185, 85);
+            resources.ApplyResources(this.editTitle, "editTitle");
             this.editTitle.Name = "editTitle";
-            this.editTitle.Size = new System.Drawing.Size(256, 47);
-            this.editTitle.TabIndex = 26;
-            this.editTitle.Text = "Edit Employee";
             // 
             // cancelButton
             // 
             this.cancelButton.BackColor = System.Drawing.SystemColors.GrayText;
-            this.cancelButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelButton.Location = new System.Drawing.Point(226, 428);
+            resources.ApplyResources(this.cancelButton, "cancelButton");
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(172, 30);
-            this.cancelButton.TabIndex = 48;
-            this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // EditEmployeeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(625, 593);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.hoursWorkedTb);
@@ -300,8 +219,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "EditEmployeeForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EditEmployeeForm";
             this.Load += new System.EventHandler(this.EditEmployeeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

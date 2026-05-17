@@ -103,6 +103,9 @@
     <EmbeddedResource Include="EmployeeViewForm.resx">
       <DependentUpon>EmployeeViewForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LogInForm.es.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogInForm.fr-CA.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>
     </EmbeddedResource>

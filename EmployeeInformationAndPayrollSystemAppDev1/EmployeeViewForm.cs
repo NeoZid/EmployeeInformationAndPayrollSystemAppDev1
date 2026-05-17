@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -32,7 +33,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
 
             if (_employee.HoursWorked > 0)
             {
-                hoursWorkedTb.Text = _employee.HoursWorked.ToString();
+                hoursWorkedTb.Text = _employee.HoursWorked.ToString(CultureInfo.InvariantCulture);
                 double gross = pc.CalculateGross(_employee.HourlyRate, _employee.HoursWorked);
                 double net = pc.CalculateNet(gross);
                 grossPayLabel.Text = "$" + gross.ToString("F2");
@@ -61,7 +62,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            double.TryParse(hoursWorkedTb.Text, out double hours);
+            double.TryParse(hoursWorkedTb.Text, NumberStyles.Number, CultureInfo.InvariantCulture, out double hours);
             // check hours 
             if (hours < 0 || hours > 80)
             {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -27,8 +28,8 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             emailTb.Text = _employee.Email;
             bdayTimePicker.Value = _employee.DateOfBirth;
             PTODaysTb.Text = _employee.PTODays.ToString();
-            hoursWorkedTb.Text = _employee.HoursWorked.ToString();
-            hourlyRateTb.Text = _employee.HourlyRate.ToString();
+            hoursWorkedTb.Text = _employee.HoursWorked.ToString(CultureInfo.InvariantCulture);
+            hourlyRateTb.Text = _employee.HourlyRate.ToString(CultureInfo.InvariantCulture);
             departmentCb.SelectedItem = _employee.Department;
             roleCb.SelectedItem = _employee.Role;
         }
@@ -109,7 +110,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            double.TryParse(hourlyRateTb.Text, out double hourlyRate);
+            double.TryParse(hourlyRateTb.Text, NumberStyles.Number, CultureInfo.InvariantCulture, out double hourlyRate);
             if (hourlyRate <= 0)
             {
                 MessageBox.Show("Hourly Rate must be greater than 0!", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -130,7 +131,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            double.TryParse(hoursWorkedTb.Text, out double hoursWorked);
+            double.TryParse(hoursWorkedTb.Text, NumberStyles.Number, CultureInfo.InvariantCulture, out double hoursWorked);
             // between 0 and 80 only
             if (hoursWorked > 80)
             {
@@ -148,7 +149,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            int.TryParse(PTODaysTb.Text, out int PTODays);
+            int.TryParse(PTODaysTb.Text, NumberStyles.Integer, CultureInfo.InvariantCulture, out int PTODays);
             if (PTODays < 0 || PTODays > 365)
             {
                 MessageBox.Show("PTO Days must be between 0 and 365.", "Invalid Input",

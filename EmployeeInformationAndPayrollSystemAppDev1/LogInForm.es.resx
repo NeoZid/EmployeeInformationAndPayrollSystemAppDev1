@@ -119,42 +119,36 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="mainTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 159</value>
+    <value>91, 159</value>
   </data>
   <data name="mainTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>614, 37</value>
+    <value>627, 37</value>
   </data>
   <data name="mainTitle.Text" xml:space="preserve">
-    <value>Système d'information et de paie des employés</value>
-  </data>
-  <data name="signInButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>314, 371</value>
-  </data>
-  <data name="signInButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 32</value>
+    <value>Sistema de información y nómina de empleados</value>
   </data>
   <data name="signInButton.Text" xml:space="preserve">
-    <value>Se connecter</value>
+    <value>Iniciar sesión</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 17</value>
+    <value>91, 17</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Identifiant</value>
+    <value>ID de usuario</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 17</value>
+    <value>77, 17</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Mot de passe</value>
+    <value>Contraseña</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>544, 16</value>
+    <value>562, 16</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 13</value>
+    <value>107, 13</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Sélectionner la langue:</value>
+    <value>Seleccionar idioma:</value>
   </data>
 </root>

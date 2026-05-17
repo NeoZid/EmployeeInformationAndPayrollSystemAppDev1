@@ -35,6 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.userIdTb = new System.Windows.Forms.TextBox();
+            this.languageCb = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // mainTitle
@@ -46,8 +48,8 @@
             // 
             // signInButton
             // 
-            resources.ApplyResources(this.signInButton, "signInButton");
             this.signInButton.BackColor = System.Drawing.Color.Turquoise;
+            resources.ApplyResources(this.signInButton, "signInButton");
             this.signInButton.ForeColor = System.Drawing.Color.White;
             this.signInButton.Name = "signInButton";
             this.signInButton.UseVisualStyleBackColor = false;
@@ -73,11 +75,30 @@
             resources.ApplyResources(this.userIdTb, "userIdTb");
             this.userIdTb.Name = "userIdTb";
             // 
+            // languageCb
+            // 
+            this.languageCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.languageCb, "languageCb");
+            this.languageCb.FormattingEnabled = true;
+            this.languageCb.Items.AddRange(new object[] {
+            resources.GetString("languageCb.Items"),
+            resources.GetString("languageCb.Items1"),
+            resources.GetString("languageCb.Items2")});
+            this.languageCb.Name = "languageCb";
+            this.languageCb.SelectedIndexChanged += new System.EventHandler(this.languageCb_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
             // LogInForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.languageCb);
             this.Controls.Add(this.userIdTb);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -87,6 +108,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "LogInForm";
+            this.Load += new System.EventHandler(this.LogInForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,6 +122,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox userIdTb;
+        private System.Windows.Forms.Label label3;
+        internal System.Windows.Forms.ComboBox languageCb;
     }
 }
 

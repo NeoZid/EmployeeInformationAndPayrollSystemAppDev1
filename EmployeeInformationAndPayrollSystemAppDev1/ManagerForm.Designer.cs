@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,14 +43,9 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(20, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Manager Dashboard";
             // 
             // employeeDataView
             // 
@@ -70,7 +66,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.employeeDataView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.employeeDataView.ColumnHeadersHeight = 35;
+            resources.ApplyResources(this.employeeDataView, "employeeDataView");
             this.employeeDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -82,74 +78,54 @@
             this.employeeDataView.DefaultCellStyle = dataGridViewCellStyle3;
             this.employeeDataView.EnableHeadersVisualStyles = false;
             this.employeeDataView.GridColor = System.Drawing.Color.LightGray;
-            this.employeeDataView.Location = new System.Drawing.Point(27, 72);
             this.employeeDataView.MultiSelect = false;
             this.employeeDataView.Name = "employeeDataView";
             this.employeeDataView.ReadOnly = true;
             this.employeeDataView.RowHeadersVisible = false;
             this.employeeDataView.RowTemplate.Height = 28;
             this.employeeDataView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.employeeDataView.Size = new System.Drawing.Size(1035, 404);
-            this.employeeDataView.TabIndex = 1;
             // 
             // registerButton
             // 
             this.registerButton.BackColor = System.Drawing.Color.SlateBlue;
-            this.registerButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.registerButton, "registerButton");
             this.registerButton.ForeColor = System.Drawing.Color.White;
-            this.registerButton.Location = new System.Drawing.Point(345, 35);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(206, 32);
-            this.registerButton.TabIndex = 2;
-            this.registerButton.Text = "Register An Employee";
             this.registerButton.UseVisualStyleBackColor = false;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // editButton
             // 
             this.editButton.BackColor = System.Drawing.Color.CadetBlue;
-            this.editButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.editButton, "editButton");
             this.editButton.ForeColor = System.Drawing.Color.White;
-            this.editButton.Location = new System.Drawing.Point(608, 35);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(206, 32);
-            this.editButton.TabIndex = 3;
-            this.editButton.Text = "Edit An Employee";
             this.editButton.UseVisualStyleBackColor = false;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // removeButton
             // 
             this.removeButton.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.removeButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.removeButton, "removeButton");
             this.removeButton.ForeColor = System.Drawing.Color.White;
-            this.removeButton.Location = new System.Drawing.Point(856, 34);
             this.removeButton.Name = "removeButton";
-            this.removeButton.Size = new System.Drawing.Size(206, 32);
-            this.removeButton.TabIndex = 4;
-            this.removeButton.Text = "Remove an employee";
             this.removeButton.UseVisualStyleBackColor = false;
             this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // logoutButton
             // 
             this.logoutButton.BackColor = System.Drawing.Color.MidnightBlue;
-            this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.logoutButton, "logoutButton");
             this.logoutButton.ForeColor = System.Drawing.Color.White;
-            this.logoutButton.Location = new System.Drawing.Point(945, 494);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(117, 33);
-            this.logoutButton.TabIndex = 5;
-            this.logoutButton.Text = "Logout";
             this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // ManagerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.ClientSize = new System.Drawing.Size(1089, 549);
             this.Controls.Add(this.logoutButton);
             this.Controls.Add(this.removeButton);
             this.Controls.Add(this.editButton);
@@ -159,8 +135,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "ManagerForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ManagerForm";
             this.Load += new System.EventHandler(this.ManagerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employeeDataView)).EndInit();
             this.ResumeLayout(false);
