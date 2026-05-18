@@ -149,9 +149,6 @@
   <data name="employeeDataView.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
-  <data name="editButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <data name="removeButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 11.25pt, style=Bold</value>
   </data>
@@ -197,6 +194,9 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="employeeDataView.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;logoutButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -227,14 +227,14 @@
   <data name="&gt;&gt;editButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="employeeDataView.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="editButton.Text" xml:space="preserve">
     <value>Edit An Employee</value>
   </data>
-  <data name="logoutButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>945, 494</value>
+  <data name="removeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>856, 34</value>
   </data>
   <data name="&gt;&gt;editButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -261,8 +261,8 @@
   <data name="editButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>608, 35</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="logoutButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>945, 494</value>
   </data>
   <data name="&gt;&gt;editButton.Parent" xml:space="preserve">
     <value>$this</value>
@@ -282,8 +282,8 @@
   <data name="&gt;&gt;logoutButton.Name" xml:space="preserve">
     <value>logoutButton</value>
   </data>
-  <data name="removeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>856, 34</value>
+  <data name="editButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -302,8 +302,5 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>es</value>
   </metadata>
 </root>

@@ -221,9 +221,6 @@
   <data name="&gt;&gt;roleLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="roleLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
   <data name="calculateButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 40</value>
   </data>
@@ -232,9 +229,6 @@
   </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 25</value>
   </data>
   <data name="newPasswordTb.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -251,11 +245,17 @@
   <data name="calculateButton.Text" xml:space="preserve">
     <value>Calculate</value>
   </data>
+  <data name="&gt;&gt;grossPayLabel.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
   <data name="calculateButton.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 17</value>
+  </data>
+  <data name="&gt;&gt;hoursWorkedTb.Name" xml:space="preserve">
+    <value>hoursWorkedTb</value>
   </data>
   <data name="nameLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt</value>
@@ -281,6 +281,9 @@
   <data name="logoutButton.Text" xml:space="preserve">
     <value>Logout</value>
   </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
   <data name="&gt;&gt;label12.Name" xml:space="preserve">
     <value>label12</value>
   </data>
@@ -289,6 +292,9 @@
   </data>
   <data name="&gt;&gt;label4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;departmentLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Name:</value>
@@ -302,14 +308,14 @@
   <data name="label9.Text" xml:space="preserve">
     <value>Hours Worked:</value>
   </data>
-  <data name="changePwBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 40</value>
-  </data>
   <data name="logoutButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;idLabel.Parent" xml:space="preserve">
     <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;calculateButton.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="&gt;&gt;PTOdaysLabel.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -340,6 +346,9 @@
   </data>
   <data name="&gt;&gt;nameLabel.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>35, 100</value>
@@ -428,9 +437,6 @@
   </data>
   <data name="&gt;&gt;label5.Parent" xml:space="preserve">
     <value>groupBox2</value>
-  </data>
-  <data name="departmentLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 25</value>
   </data>
   <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -552,8 +558,8 @@
   <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;calculateButton.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="departmentLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="logoutButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 40</value>
@@ -579,11 +585,11 @@
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
   </data>
-  <data name="&gt;&gt;departmentLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="departmentLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 25</value>
   </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 25</value>
   </data>
   <data name="&gt;&gt;label9.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -672,8 +678,8 @@
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 61</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -774,9 +780,6 @@
   <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="departmentLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
   <data name="logoutButton.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
@@ -810,8 +813,8 @@
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 25</value>
   </data>
-  <data name="&gt;&gt;hoursWorkedTb.Name" xml:space="preserve">
-    <value>hoursWorkedTb</value>
+  <data name="roleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -831,8 +834,8 @@
   <data name="departmentLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>380, 100</value>
   </data>
-  <data name="&gt;&gt;grossPayLabel.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="changePwBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 40</value>
   </data>
   <data name="logoutButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>538, 851</value>
@@ -900,9 +903,6 @@
   <data name="&gt;&gt;confirmPasswordTb.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;calculateButton.Name" xml:space="preserve">
-    <value>calculateButton</value>
-  </data>
   <data name="label11.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -924,8 +924,8 @@
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 25</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>35, 61</value>
+  <data name="&gt;&gt;calculateButton.Name" xml:space="preserve">
+    <value>calculateButton</value>
   </data>
   <data name="nameLabel.Text" xml:space="preserve">
     <value>"Name"</value>
@@ -959,8 +959,5 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>es</value>
   </metadata>
 </root>

@@ -48,8 +48,8 @@
             // 
             // signInButton
             // 
-            this.signInButton.BackColor = System.Drawing.Color.Turquoise;
             resources.ApplyResources(this.signInButton, "signInButton");
+            this.signInButton.BackColor = System.Drawing.Color.Turquoise;
             this.signInButton.ForeColor = System.Drawing.Color.White;
             this.signInButton.Name = "signInButton";
             this.signInButton.UseVisualStyleBackColor = false;
@@ -77,8 +77,8 @@
             // 
             // languageCb
             // 
-            this.languageCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             resources.ApplyResources(this.languageCb, "languageCb");
+            this.languageCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.languageCb.FormattingEnabled = true;
             this.languageCb.Items.AddRange(new object[] {
             resources.GetString("languageCb.Items"),

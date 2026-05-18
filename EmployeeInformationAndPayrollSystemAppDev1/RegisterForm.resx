@@ -158,9 +158,6 @@
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt, style=Bold</value>
   </data>
-  <data name="bdayTimePicker.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
   <data name="&gt;&gt;hourlyRateTb.Name" xml:space="preserve">
     <value>hourlyRateTb</value>
   </data>
@@ -287,9 +284,6 @@
   <data name="&gt;&gt;passwordTb.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 17</value>
-  </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 231</value>
   </data>
@@ -311,6 +305,9 @@
   </data>
   <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Department</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
     <value>Role/Title</value>
@@ -351,8 +348,14 @@
   <data name="&gt;&gt;bdayTimePicker.Type" xml:space="preserve">
     <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="infoLabel.Text" xml:space="preserve">
+    <value>Fill out the form carefully for registration</value>
+  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 17</value>
+  </data>
+  <data name="&gt;&gt;registerButton.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -398,9 +401,6 @@
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>17</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -462,14 +462,14 @@
   <data name="label8.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="lNameTb.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;employeeInfo.ZOrder" xml:space="preserve">
     <value>18</value>
-  </data>
-  <data name="&gt;&gt;registerTitle.Name" xml:space="preserve">
-    <value>registerTitle</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -546,8 +546,8 @@
   <data name="&gt;&gt;hourlyRateTb.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;registerButton.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 17</value>
   </data>
   <data name="&gt;&gt;cancelBtn.Name" xml:space="preserve">
     <value>cancelBtn</value>
@@ -585,8 +585,8 @@
   <data name="employeeInfo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lNameTb.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="infoLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;label7.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -618,8 +618,8 @@
   <data name="&gt;&gt;registerTitle.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="infoLabel.Text" xml:space="preserve">
-    <value>Fill out the form carefully for registration</value>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
   </data>
   <data name="cancelBtn.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -642,8 +642,8 @@
   <data name="label2.Text" xml:space="preserve">
     <value>Last Name</value>
   </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Department</value>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="emailTb.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -744,8 +744,8 @@
   <data name="&gt;&gt;label8.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="infoLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="bdayTimePicker.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
   <data name="roleCb.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 21</value>
@@ -768,8 +768,8 @@
   <data name="fNameTb.Location" type="System.Drawing.Point, System.Drawing">
     <value>121, 150</value>
   </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
+  <data name="&gt;&gt;registerTitle.Name" xml:space="preserve">
+    <value>registerTitle</value>
   </data>
   <data name="&gt;&gt;label4.Parent" xml:space="preserve">
     <value>$this</value>
@@ -779,8 +779,5 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>es</value>
   </metadata>
 </root>
