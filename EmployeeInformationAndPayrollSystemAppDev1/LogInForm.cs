@@ -41,9 +41,6 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             
             if (userIdTb.Text == "ADMIN" && passwordTb.Text == "ADMIN123")
             {
-                // RegisterForm rf = new RegisterForm();
-
-                //rf.Show();
 
                 Employee adminEmployee = new Employee("Admin", "User", "ADMIN",
                 DateTime.Now, "admin@company.com", "ADMIN123", "Manager", "Management", 0);

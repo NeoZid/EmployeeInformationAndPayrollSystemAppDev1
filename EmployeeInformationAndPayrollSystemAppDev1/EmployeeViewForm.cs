@@ -56,7 +56,7 @@ namespace EmployeeInformationAndPayrollSystemAppDev1
             }
 
             // validation for hours worked
-            if (!Regex.IsMatch(hoursWorkedTb.Text, @"^\d+(\.\d+)?$"))
+            if (!Regex.IsMatch(hoursWorkedTb.Text, @"^\d+(\.\d{1,2})?$"))
             {
                 MessageBox.Show("Hours Worked must be a valid number. Example: 40 or 37.5", "Invalid Input",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
